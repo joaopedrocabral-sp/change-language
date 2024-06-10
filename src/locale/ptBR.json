@@ -1,0 +1,14 @@
+{
+    "translation": {
+        "languageButton": "EN-US",
+        "header": {
+            "title": "Projeto Teste - Multi Idiomas"
+        },
+        "hero": {
+            "title": "Meu projeto multi idiomas",
+            "subtitle": "Seja bem-vindo ao",
+            "text1": "Minha missão com esse projeto é treinar minhas capacidades com JavaScript, React e o pacote i18next que ajuda a criar um sistema de tradução.",
+            "button": "Este botão não faz nada"
+        }
+    }
+}
