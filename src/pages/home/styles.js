@@ -17,7 +17,7 @@ export const HeroBackground = styled.div `
     height: 88vh;
 
     @media (max-width: 767px) {
-        height: 75vh;   
+        height: 70vh;   
     }
 
 `
