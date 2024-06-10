@@ -2,6 +2,9 @@ import { ChangeButton } from "./styles";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
+import usFlag from "../../assets/images/us.svg";
+import brFlag from "../../assets/images/brasil.svg";
+
 function Button(){
 
     const { 
@@ -10,14 +13,14 @@ function Button(){
     } = useTranslation()
         
     const [currentLanguage, setCurrentLanguage] = useState(language)
-    const [currentFlag, setCurrentFlag] = useState(currentLanguage === "en-US" ? "./src/assets/images/brasil.svg" : "./src/assets/images/us.svg")
+    const [currentFlag, setCurrentFlag] = useState(currentLanguage === "en-US" ? brFlag : usFlag)
 
     const handleChangeLanguage = () => {
         const newLanguage = currentLanguage === "en-US" ? "pt-BR" : "en-US"
         changeLanguage(newLanguage)
         setCurrentLanguage(newLanguage)
 
-        const newFlag = currentFlag === "./src/assets/images/us.svg" ? "./src/assets/images/brasil.svg" : "./src/assets/images/us.svg"
+        const newFlag = currentFlag === usFlag ? brFlag : usFlag
         setCurrentFlag(newFlag)
     }
 

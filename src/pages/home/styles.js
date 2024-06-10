@@ -6,7 +6,6 @@ export const Container = styled.div `
 `
 
 export const HeroBackground = styled.div `
-    background-image: linear-gradient(to bottom, rgb(6, 41, 148, 0.7), rgb(0, 0, 0, 1)), url("./src/assets/images/multi-language.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
