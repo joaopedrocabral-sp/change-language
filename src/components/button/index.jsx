@@ -1,6 +1,6 @@
 import { ChangeButton } from "./styles";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import usFlag from "../../assets/images/us.svg";
 import brFlag from "../../assets/images/brasil.svg";
@@ -11,8 +11,21 @@ function Button(){
         t,
         i18n: {changeLanguage, language} 
     } = useTranslation()
+
+    function languageVerification () {
+        if(language.includes("en") & language != "en-US"){
+            console.log("en-US")
+            changeLanguage("en-US")
+        } else if (language.includes("pt") & language != "pt-BR"){
+            console.log("pt-BR")
+            changeLanguage("pt-BR")
+        } else {
+            language
+        }
+    }        
         
-    const [currentLanguage, setCurrentLanguage] = useState(language)
+    const [currentLanguage, setCurrentLanguage] = useState(languageVerification())
+
     const [currentFlag, setCurrentFlag] = useState(currentLanguage === "en-US" ? brFlag : usFlag)
 
     const handleChangeLanguage = () => {
