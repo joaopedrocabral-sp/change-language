@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div `
     margin: 30px 0;
     padding: 0;
+
+    @media (max-width: 767px){
+        margin: 15px 0;
+    }
 `
 
 export const HeroBackground = styled.div `
@@ -13,7 +17,7 @@ export const HeroBackground = styled.div `
     height: 88vh;
 
     @media (max-width: 767px) {
-        height: 78vh;   
+        height: 75vh;   
     }
 
 `

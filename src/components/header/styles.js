@@ -12,7 +12,7 @@ export const HeaderPrimary = styled.header `
     box-shadow: 0px 10px 32px -10px rgba(25, 76, 230,0.3);
 
     @media (max-width: 767px){
-        min-height: 22vh;
+        min-height: 25vh;
     }
 `
 
