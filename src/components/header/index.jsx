@@ -4,7 +4,24 @@ import { useTranslation } from "react-i18next";
 
 function Header1(){
 
-    const { t } = useTranslation()
+    const { 
+        t,
+        i18n: {changeLanguage, language} 
+    } = useTranslation()
+
+    function languageVerification () {
+        if(language.includes("en") & language != "en-US"){
+            changeLanguage("en-US")
+            language
+        } else if (language.includes("pt") & language != "pt-BR"){
+            changeLanguage("pt-BR")
+            language
+        } else {
+            language
+        }
+    }
+
+    languageVerification()
 
     return(
 

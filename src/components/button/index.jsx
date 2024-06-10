@@ -11,20 +11,8 @@ function Button(){
         t,
         i18n: {changeLanguage, language} 
     } = useTranslation()
-
-    function languageVerification () {
-        if(language.includes("en") & language != "en-US"){
-            changeLanguage("en-US")
-            language
-        } else if (language.includes("pt") & language != "pt-BR"){
-            changeLanguage("pt-BR")
-            language
-        } else {
-            language
-        }
-    }
         
-    const [currentLanguage, setCurrentLanguage] = useState(languageVerification())
+    const [currentLanguage, setCurrentLanguage] = useState(language)
 
     const [currentFlag, setCurrentFlag] = useState(currentLanguage === "en-US" ? brFlag : usFlag)
 
