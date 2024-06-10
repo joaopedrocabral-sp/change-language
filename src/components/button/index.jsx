@@ -1,6 +1,6 @@
 import { ChangeButton } from "./styles";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import usFlag from "../../assets/images/us.svg";
 import brFlag from "../../assets/images/brasil.svg";
@@ -14,15 +14,15 @@ function Button(){
 
     function languageVerification () {
         if(language.includes("en") & language != "en-US"){
-            console.log("en-US")
             changeLanguage("en-US")
+            language
         } else if (language.includes("pt") & language != "pt-BR"){
-            console.log("pt-BR")
             changeLanguage("pt-BR")
+            language
         } else {
             language
         }
-    }        
+    }
         
     const [currentLanguage, setCurrentLanguage] = useState(languageVerification())
 
