@@ -19,6 +19,6 @@ export const ChangeButton = styled.button `
     @media (max-width: 767px){
         font-size: 16px;
         padding: 8px 40px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 `

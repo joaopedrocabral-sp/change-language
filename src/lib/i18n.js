@@ -14,7 +14,7 @@ i18n
     .init({
     resources,
     lng: navigator.language,
-    fallbackLng: "en-US",
+    fallbackLng: "en",
     interpolation: {
         escapeValue: false,
     }
