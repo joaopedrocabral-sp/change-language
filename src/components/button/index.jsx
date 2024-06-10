@@ -15,9 +15,6 @@ function Button(){
     const [currentLanguage, setCurrentLanguage] = useState(language)
     const [currentFlag, setCurrentFlag] = useState(currentLanguage === "en-US" ? brFlag : usFlag)
 
-    console.log(currentLanguage)
-    console.log(currentFlag)
-
     const handleChangeLanguage = () => {
         const newLanguage = currentLanguage === "en-US" ? "pt-BR" : "en-US"
         changeLanguage(newLanguage)
@@ -27,13 +24,8 @@ function Button(){
         setCurrentFlag(newFlag)
     }
 
-    console.log(currentLanguage)
-    console.log(currentFlag)
-
     return(
-
         <ChangeButton type="button" onClick={handleChangeLanguage}><img src={currentFlag} alt="" />{t("languageButton")}</ChangeButton>
-
     )
 }
 
